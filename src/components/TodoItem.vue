@@ -1,11 +1,30 @@
 <template>
   <div>
-    <p>
+    <p class="todo-item">
       Todo item
     </p>
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  name: "TodoItem",
+  props: ["todo"],
+};
+</script>
 
-<style scoped></style>
+<style scoped>
+.todo-item {
+  background: #f4f4f4;
+  padding: 10px;
+  border-bottom: 1px #ccc dotted;
+}
+.is-complete {
+  text-decoration: line-through;
+}
+
+.del {
+  background: #ff0000;
+  color: #fff;
+}
+</style>
